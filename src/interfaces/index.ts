@@ -1,12 +1,12 @@
-export type optionType = {
+export interface OptionType {
   name: string;
   state?: string;
   country: string;
   lat: number;
   lon: number;
-};
+}
 
-export type forecastType = {
+export interface ForecastType {
   name: string;
   country: string;
   sunrise: number;
@@ -41,4 +41,4 @@ export type forecastType = {
       visibility: number;
     }
   ];
-};
+}

@@ -1,12 +1,13 @@
 import { FC, ChangeEvent } from "react";
-import { optionType } from "../../types";
+import { OptionType } from "../../interfaces";
 import Dropdown from "../ui/Dropdown";
+
 
 type Props = {
   term: string;
-  options: optionType[];
+  options: OptionType[];
   onInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onOptionSelect: (option: optionType) => void;
+  onOptionSelect: (option: OptionType) => void;
   onSubmit: () => void;
 };
 

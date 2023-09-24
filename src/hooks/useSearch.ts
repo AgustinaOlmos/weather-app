@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { optionType } from "../types";
+import { OptionType } from "../interfaces";
 
-export const useSearch = (city: optionType | null) => {
-  const [term, setTerm] = useState<optionType | null>(null);
+export const useSearch = (city: OptionType | null) => {
+  const [term, setTerm] = useState<OptionType | null>(null);
   const [inputValue, setInputValue] = useState<string>("");
-  const [options, setOptions] = useState<optionType[]>([]);
+  const [options, setOptions] = useState<OptionType[]>([]);
 
   const getSearchOptions = (value: string) => {
     fetch(

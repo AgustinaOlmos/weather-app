@@ -6,8 +6,8 @@ type Props = {
 
 const LimitModal: FC<Props> = ({ setShowModal }) => {
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center z-50 mx-4 md:m-auto">
-      <div className="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 p-8 rounded-2xl shadow">
+    <div className="fixed inset-0 flex flex-col items-center justify-center z-50 mx-4 md:m-auto top-5 md:top-10">
+      <div className="bg-gradient-to-br from-gray-300 via-gray-400 to-gray-500 p-8 rounded-2xl shadow ring-2 ring-neutral-500/50 ring-offset-2">
         <h2 className="mb-2 text-sm md:text-base text-center">
           Has alcanzado el límite de uso gratuito
         </h2>

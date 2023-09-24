@@ -1,16 +1,16 @@
 import { FC, ChangeEvent } from "react";
-import { forecastType, optionType } from "../../types";
+import { ForecastType, OptionType } from "../../interfaces";
 import HourlyForecast from "./HourlyForecast";
 import SunDetails from "./SunDetails";
 import WeatherDetails from "./WeatherDetails";
 import Search from "../layout/Search";
 
 type Props = {
-  data: forecastType;
+  data: ForecastType;
   term: string;
-  options: optionType[];
+  options: OptionType[];
   onInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onOptionSelect: (option: optionType) => void;
+  onOptionSelect: (option: OptionType) => void;
   onSubmit: () => void;
 };
 
@@ -29,7 +29,6 @@ const Forecast: FC<Props> = ({
   return (
     <div className="w-full md:max-w-[80%] py-2 md:py-0 px-2 md:px-4 h-full lg:h-auto bg-white bg-opacity-20 backdrop-blur-sm rounded drop-shadow-lg">
       <div className="mx-auto w-[300px] md:w-[80%]">
-        {/* py-4 md:px-4  // py-2 md:py-4 px-2 md:px-4 */}
         <nav className="flex justify-center md:justify-end mt-2 mb-1 md:mb-0">
           <Search
             term={term}
@@ -41,7 +40,7 @@ const Forecast: FC<Props> = ({
         </nav>
         <section className="text-center">
           <h2 className="text-2xl font-black">
-            {data.name}
+            {data.name}{' '}
             <span className="font-thin">{data.country}</span>
           </h2>
           <h1 className="text-4xl font-extrabold">

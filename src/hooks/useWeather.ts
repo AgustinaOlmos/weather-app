@@ -1,22 +1,21 @@
 import { useState } from "react";
-import { optionType, forecastType } from "../types";
+import { OptionType, ForecastType } from "../interfaces";
 
 export const useWeather = () => {
-  const [city, setCity] = useState<optionType | null>(null);
-  const [forecast, setForecast] = useState<forecastType | null>(null);
+  const [city, setCity] = useState<OptionType | null>(null);
+  const [forecast, setForecast] = useState<ForecastType | null>(null);
   const [searchCount, setSearchCount] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
-  const onOptionSelect = (option: optionType) => {
+  const onOptionSelect = (option: OptionType) => {
     setCity(option);
   };
 
-  const getForecast = (city: optionType) => {
+  const getForecast = (city: OptionType) => {
     fetch(
       `https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${
         city.lon
       }&units=metric&appid=${import.meta.env.VITE_API_KEY}`
-      // `https://api.openweathermap.org/data/2.5/onecall?lat=${city.lat}&lon=${city.lon}&exclude=hourly,minutely,current,alerts&appid=${import.meta.env.VITE_API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => {

@@ -1,9 +1,10 @@
 import { FC, Fragment, useMemo, useRef } from "react";
-import { forecastType } from "../../types";
+import { ForecastType } from "../../interfaces";
 import { formatDate } from "../../utils/formatDate";
 import WeatherIcon from "../ui/WeatherIcon";
+
 type Props = {
-  data: forecastType;
+  data: ForecastType;
 };
 
 const HourlyForecast: FC<Props> = ({ data }) => {
@@ -52,9 +53,3 @@ const HourlyForecast: FC<Props> = ({ data }) => {
 };
 
 export default HourlyForecast;
-
-/* 
-
-El error indica que las asignaciones a la variable previousDate dentro del hook useMemo se perderán después de cada renderización. Esto se debe a que useMemo se usa para memorizar valores calculados entre renderizaciones, pero no para mantener el estado entre renderizaciones. Para mantener el estado entre renderizaciones, puedes usar el hook useRef.
-En este código, previousDateRef es una referencia mutable cuyo .current propiedad se actualiza con la fecha formateada actual en cada iteración del .map. Esto permite que previousDateRef.current mantenga su valor entre renderizaciones sin causar una nueva renderización cuando se cambia, eliminando así el error que estabas viendo.
-*/

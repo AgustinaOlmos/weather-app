@@ -1,16 +1,16 @@
-import { useSearch, useWeather } from "./hooks";
-import { getGradient } from "./utils/getGradient";
-import Forecast from "./components/forecast/Forecast";
-import Header from "./components/layout/Header";
-import Search from "./components/layout/Search";
-import LimitModal from "./components/ui/LimitModal";
+import { useSearch, useWeather } from './hooks'
+import { getGradient } from './utils/getGradient'
+import Forecast from './components/forecast/Forecast'
+import Header from './components/layout/Header'
+import Search from './components/layout/Search'
+import LimitModal from './components/ui/LimitModal'
 
 const WeatherApp = () => {
   const { city, forecast, showModal, onOptionSelect, onSubmit, setShowModal } =
-    useWeather();
-  const { inputValue, options, onInputChange } = useSearch(city);
+    useWeather()
+  const { inputValue, options, onInputChange } = useSearch(city)
 
-  const gradientEnd = getGradient(forecast?.list[0].main.temp);
+  const gradientEnd = getGradient(forecast?.list[0].main.temp)
 
   return (
     <main
@@ -40,6 +40,6 @@ const WeatherApp = () => {
 
       {showModal && <LimitModal setShowModal={setShowModal} />}
     </main>
-  );
-};
-export default WeatherApp;
+  )
+}
+export default WeatherApp

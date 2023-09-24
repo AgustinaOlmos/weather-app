@@ -5,11 +5,11 @@ import {
   getWindDirection,
   getVisibilityValue,
 } from "../../utils/degrees";
-import { forecastType } from "../../types";
+import { ForecastType } from "../../interfaces";
 import WeatherCard from "../ui/WeatherCard";
 
 type Props = {
-  data: forecastType;
+  data: ForecastType;
 };
 
 const WeatherDetails: FC<Props> = ({ data }) => {
@@ -17,7 +17,6 @@ const WeatherDetails: FC<Props> = ({ data }) => {
 
   return (
     <section className="flex flex-wrap justify-between md:justify-items-center md:grid md:grid-cols-3 md:gap-4 text-zinc-700">
-      {/* Wind */}
       <WeatherCard
         icon="wind"
         title="Wind"
@@ -27,7 +26,6 @@ const WeatherDetails: FC<Props> = ({ data }) => {
         )}, gusts ${wind.gust.toFixed(1)} km/h`}
       />
 
-      {/* Feels Like */}
       <WeatherCard
         icon="feels"
         title="Feels Like"
@@ -39,7 +37,6 @@ const WeatherDetails: FC<Props> = ({ data }) => {
         }`}
       />
 
-      {/* Humidity */}
       <WeatherCard
         icon="humidity"
         title="Humidity"
@@ -47,7 +44,6 @@ const WeatherDetails: FC<Props> = ({ data }) => {
         description={`${getHumidityValue(main.humidity)}`}
       />
 
-      {/* Precipitation */}
       <WeatherCard
         icon="pop"
         title="Precipitation"
@@ -55,7 +51,6 @@ const WeatherDetails: FC<Props> = ({ data }) => {
         description={`${getPop(pop)}, clouds at ${clouds.all}%`}
       />
 
-      {/* Pressure */}
       <WeatherCard
         icon="pressure"
         title="Pressure"
@@ -65,7 +60,6 @@ const WeatherDetails: FC<Props> = ({ data }) => {
         } than standard`}
       />
 
-      {/* Visibility */}
       <WeatherCard
         icon="visibility"
         title="Visibility"

@@ -1,26 +1,19 @@
-import { FC } from 'react'
-import { Sunrise, Sunset } from '../shared'
-import { getSunTime } from '../../utils/degrees'
+import { FC } from "react";
+import { Sunrise, Sunset } from "../shared";
+import SunBlock from "../ui/SunBlock";
 
 type Props = {
-  sunrise: number
-  sunset: number
-}
+  sunrise: number;
+  sunset: number;
+};
 
 const SunDetails: FC<Props> = ({ sunrise, sunset }) => {
   return (
     <section className="flex flex-wrap justify-between md:justify-around text-zinc-700">
-      <div className="w-[140px] lg:w-[45%] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-sm rounded drop-shadow-lg py-4 mb-5">
-        <Sunrise />
-        <span className="mt-2 text-base">{getSunTime(sunrise)}</span>
-      </div>
-
-      <div className="w-[140px] lg:w-[45%] text-xs font-bold flex flex-col items-center bg-white/20 backdrop-blur-sm rounded drop-shadow-lg py-4 mb-5">
-        <Sunset />
-        <span className="mt-2 text-base">{getSunTime(sunset)}</span>
-      </div>
+      <SunBlock time={sunrise} Icon={<Sunrise />} />
+      <SunBlock time={sunset} Icon={<Sunset />} />
     </section>
-  )
-}
+  );
+};
 
-export default SunDetails
+export default SunDetails;

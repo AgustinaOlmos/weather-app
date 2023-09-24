@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import { optionType, forecastType } from '../types'
+import { useState } from "react";
+import { optionType, forecastType } from "../types";
 
 export const useWeather = () => {
-  const [city, setCity] = useState<optionType | null>(null)
-  const [forecast, setForecast] = useState<forecastType | null>(null)
-  const [searchCount, setSearchCount] = useState(0)
-  const [showModal, setShowModal] = useState(false)
+  const [city, setCity] = useState<optionType | null>(null);
+  const [forecast, setForecast] = useState<forecastType | null>(null);
+  const [searchCount, setSearchCount] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
   const onOptionSelect = (option: optionType) => {
-    setCity(option)
-  }
+    setCity(option);
+  };
 
   const getForecast = (city: optionType) => {
     fetch(
@@ -23,22 +23,22 @@ export const useWeather = () => {
         const forecastData = {
           ...data,
           ...data.city,
-        }
-        setForecast(forecastData)
+        };
+        setForecast(forecastData);
       })
-      .catch((err) => console.log(err))
-  }
+      .catch((err) => console.log(err));
+  };
 
   const onSubmit = () => {
-    if (!city) return
+    if (!city) return;
 
     if (searchCount < 5) {
-      getForecast(city)
-      setSearchCount((prevCount) => prevCount + 1)
+      getForecast(city);
+      setSearchCount((prevCount) => prevCount + 1);
     } else {
-      setShowModal(true)
+      setShowModal(true);
     }
-  }
+  };
 
   return {
     city,
@@ -48,5 +48,5 @@ export const useWeather = () => {
     onOptionSelect,
     onSubmit,
     setShowModal,
-  }
-}
+  };
+};

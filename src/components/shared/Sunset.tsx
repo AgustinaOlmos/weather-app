@@ -1,6 +1,6 @@
 export const Sunset = (): JSX.Element => (
   <svg
-  className="lg:w-8 lg:h-8"
+    className="lg:w-8 lg:h-8"
     width="20"
     height="20"
     viewBox="0 0 108 108"
@@ -15,4 +15,4 @@ export const Sunset = (): JSX.Element => (
       strokeLinejoin="round"
     />
   </svg>
-)
+);

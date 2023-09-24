@@ -1,12 +1,12 @@
-import { FC } from 'react'
-import { IconType, Icon } from '../shared'
+import { FC } from "react";
+import { IconType, Icon } from "../shared";
 
 type Props = {
-  icon: IconType
-  title: string
-  info: string
-  description: string
-}
+  icon: IconType;
+  title: string;
+  info: string;
+  description: string;
+};
 
 const WeatherCard: FC<Props> = ({ icon, title, info, description }) => {
   return (
@@ -17,7 +17,7 @@ const WeatherCard: FC<Props> = ({ icon, title, info, description }) => {
       <h3 className="mt-2 lg:text-lg">{info}</h3>
       <p className="font-bold text-sm lg:text-base">{description}</p>
     </article>
-  )
-}
+  );
+};
 
-export default WeatherCard
+export default WeatherCard;

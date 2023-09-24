@@ -1,14 +1,14 @@
-import { FC, ChangeEvent } from 'react'
-import { optionType } from '../../types'
-import Dropdown from '../ui/Dropdown'
+import { FC, ChangeEvent } from "react";
+import { optionType } from "../../types";
+import Dropdown from "../ui/Dropdown";
 
 type Props = {
-  term: string
-  options: optionType[]
-  onInputChange: (e: ChangeEvent<HTMLInputElement>) => void
-  onOptionSelect: (option: optionType) => void
-  onSubmit: () => void
-}
+  term: string;
+  options: optionType[];
+  onInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onOptionSelect: (option: optionType) => void;
+  onSubmit: () => void;
+};
 
 const Search: FC<Props> = ({
   term,
@@ -35,7 +35,7 @@ const Search: FC<Props> = ({
         search
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

@@ -1,6 +1,6 @@
-import Forecast from './components/Forecast'
-import Header from './components/Header'
-import Search from './components/Search'
+import Forecast from './components/forecast/Forecast'
+import Header from './components/layout/Header'
+import Search from './components/layout/Search'
 import { useSearch, useWeather } from './hooks'
 
 const WeatherApp = () => {

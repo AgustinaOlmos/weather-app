@@ -1,9 +1,9 @@
 import { FC, ChangeEvent } from 'react'
-import { forecastType, optionType } from '../types'
+import { forecastType, optionType } from '../../types'
 import HourlyForecast from './HourlyForecast'
 import SunDetails from './SunDetails'
 import WeatherDetails from './WeatherDetails'
-import Search from './Search'
+import Search from '../layout/Search'
 
 type Props = {
   data: forecastType

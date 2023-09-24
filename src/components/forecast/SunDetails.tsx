@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Sunrise, Sunset } from '../shared'
-import { getSunTime } from '../utils/degrees'
+import { getSunTime } from '../../utils/degrees'
 
 type Props = {
   sunrise: number

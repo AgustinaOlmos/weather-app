@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { optionType } from '../types'
+import { optionType } from '../../types'
 type Props = {
   options: optionType[]
   onOptionSelect: (option: optionType) => void

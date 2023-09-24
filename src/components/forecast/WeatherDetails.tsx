@@ -4,9 +4,9 @@ import {
   getPop,
   getWindDirection,
   getVisibilityValue,
-} from '../utils/degrees'
-import { forecastType } from '../types'
-import WeatherCard from './WeatherCard'
+} from '../../utils/degrees'
+import { forecastType } from '../../types'
+import WeatherCard from '../ui/WeatherCard'
 
 type Props = {
   data: forecastType

@@ -1,6 +1,6 @@
 import { FC, Fragment } from 'react'
-import { forecastType } from '../types'
-import { formatDate } from '../utils/formatDate'
+import { forecastType } from '../../types'
+import { formatDate } from '../../utils/formatDate'
 
 const WEATHER_ICON_BASE_URL = 'http://openweathermap.org/img/wn/'
 

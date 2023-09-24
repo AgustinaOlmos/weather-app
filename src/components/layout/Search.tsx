@@ -1,6 +1,6 @@
 import { FC, ChangeEvent } from 'react'
-import { optionType } from '../types'
-import Dropdown from './Dropdown'
+import { optionType } from '../../types'
+import Dropdown from '../ui/Dropdown'
 
 type Props = {
   term: string

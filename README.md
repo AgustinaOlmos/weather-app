@@ -1,27 +1,54 @@
-# React + TypeScript + Vite
+# Project: Weather Forecast
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application developed to search and display weather forecast in different locations. It uses modern technologies such as Vite, React, TypeScript and Tailwind CSS to provide a fast and efficient experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Weather forecast search by city.
+- Display of details such as temperature, weather conditions, humidity, among others.
+- Responsive design that adapts to mobile and desktop devices.
+- Friendly and easy to use interface.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+1. Clone the repository in your local environment:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+
+   ```
+
+2. Change to the project directory:
+
+   ```bash
+   cd tu-repositorio
+
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+This will start the development server at (http://localhost:5173) or the configured port.
+
+### Notes
+
+- Remember to replace your-user and your-repository with your GitHub username and the name of your repository.
+- You can add a preview image of your application by uploading it to your repository and linking it in the README.md.
+- Adapt the sections according to the needs of your project, adding or removing parts as needed.

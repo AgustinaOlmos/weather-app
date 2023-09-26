@@ -18,7 +18,7 @@ export const useSearch = (city: OptionType | null) => {
   };
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.trim();
+    const value = e.target.value;
     setInputValue(value);
     if (value === "") return;
     getSearchOptions(value);
